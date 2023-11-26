@@ -5,12 +5,13 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgray;
+    background-image: linear-gradient(100deg, rgb(76, 104, 243), rgb(79, 70, 229));
     width: 100%;
 }
 body > h1{
     text-align: center;
     margin-top: 20px;
+    color: white;
 }
 main{
     padding: 0.5rem;
@@ -23,8 +24,8 @@ main{
 }
 .container-calculadora{
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.123);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.173);
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.589);
     border-radius: 9px;
     background-color: white;
     transition: 0.5s all;
@@ -47,6 +48,7 @@ main{
     text-align: right;
     padding: 1rem;
     border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.181);
 }
 .res{
     font-size: 24px;
@@ -65,7 +67,7 @@ main{
     height: 430px;
 }
 .btn{
-    border: 1px solid rgba(0, 0, 0, 0.203);
+    border: 1px solid rgba(0, 0, 0, 0.082);
     width: 25%;
     display: flex;
     align-items: center;
