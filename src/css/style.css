@@ -5,113 +5,113 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(100deg, rgb(76, 104, 243), rgb(79, 70, 229));
-    width: 100%;
-}
-body > h1{
-    text-align: center;
-    margin-top: 20px;
-    color: white;
+    background-color: azure;
+    background: white url(../imagens/wave-haikei\ \(3\).svg) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 main{
-    padding: 0.5rem;
-    height: 700px;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1%;
+}
+.titulo > h1{
+    color: #333;
+    text-align: center;
 }
 .container-calculadora{
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.267);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.589);
-    border-radius: 9px;
     background-color: white;
-    transition: 0.5s all;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px 9px 0px 0px;
     overflow: hidden;
+    border: 1px solid black;
 }
-.tela-exibir{
+.container-calculo{
     width: 100%;
-    height: 150px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0066FF;
+    color: white;
 }
-.input{
-    height: 60%;
-}
-.resultado{
+.container-calculo > #input-calculo{
     height: 40%;
-}
-.input-conta{
     width: 100%;
-    height: 100%;
-    font-size: 2em;
-    text-align: right;
-    padding: 1rem;
+    text-align: end;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.181);
+    background-color: transparent;
+    color: rgb(214, 213, 213);
+    padding: 1rem;
+    font-size: 1rem;
 }
-.res{
-    font-size: 24px;
-}
-.resultado{
+.container-resultado{
+    width: 100%;
+    height: 60%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: end;
+    border-top: 1px solid #333;
     padding: 1rem;
-    font-size: 2em;
 }
-.botoes{
+.container-resultado > #valor-final{
+    font-size: 1.5em;
+}
+.container-botoes{
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 430px;
 }
 .btn{
-    border: 1px solid rgba(0, 0, 0, 0.418);
     width: 25%;
+    background-color: rgba(225, 225, 225, 0.181);
+    border: 1px solid #5555557a;
+    transition: all 0.3;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(167, 167, 167);
+}
+#func-resultado{
+    background-color: rgb(7, 255, 3);
+    transition: all 0.3s;
+}
+#func-resultado:hover{
+    background-color: rgb(4, 194, 1);
+}
+#func-apagar{
+    background-color: orange;
+    transition: all 0.3s;
+}
+#func-apagar:hover{
+    background-color: rgb(201, 131, 2);
+}
+.footer{
+    width: 90%;
+    height: 10vh;
+    background-color: #0159dd;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 25%;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.2s all;
-    background-color: white;
 }
-.btn:hover{
-    background-color: lightgray;
-}
-#res{
-    background-color: rgb(92, 255, 47);
-}
-.creditos{
-    width: 100%;
-    background-color: white;
-    margin-top: 10px;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.219);
-    border: 1px solid rgba(0, 0, 0, 0.212);
-}
-.creditos > h1{
-    text-align: center;
+.footer > h1{
+    color: white;
     font-size: 1rem;
 }
-@media screen and (min-width:768px) {
-    main{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 600px;
-        padding: 0;
+@media screen and (min-width:768px){
+    .container-calculadora{
+        width: 50%;
     }
-    .flex{
-        height: 100%;
-    }
-    .creditos{
-        margin: auto;
-    }
-    body > h1{
-        margin-bottom: 20px;
+    .footer{
+        width: 50%;
     }
 }

@@ -7,42 +7,40 @@
     <title>Calculadora Virtual</title>
 </head>
 <body>
-    <h1>Calculadora Virtual</h1>
     <main>
-        <div class="flex">
-            <section class="container-calculadora">
-                <section class="tela-exibir">
-                    <div class="input">
-                        <input type="text" required class="input-conta" readonly value="0">
-                    </div>
-                    <div class="resultado">
-                        <h1 class="res">0</h1>
-                    </div>
-                </section>
-                <section class="botoes">
-                    <button class="btn" onclick="numero(this)">1</button>
-                    <button class="btn" onclick="numero(this)">2</button>
-                    <button class="btn" onclick="numero(this)">3</button>
-                    <button class="btn" id="delete">C</button>
-                    <button class="btn" onclick="numero(this)">4</button>
-                    <button class="btn" onclick="numero(this)">5</button>
-                    <button class="btn" onclick="numero(this)">6</button>
-                    <button class="btn" onclick="operacoes(this)">+</button>
-                    <button class="btn" onclick="numero(this)">7</button>
-                    <button class="btn" onclick="numero(this)">8</button>
-                    <button class="btn" onclick="numero(this)">9</button>
-                    <button class="btn" onclick="operacoes(this)">-</button>
-                    <button class="btn" onclick="operacoes(this)">/</button>
-                    <button class="btn" onclick="numero(this)">0</button>
-                    <button class="btn" onclick="operacoes(this)">*</button>
-                    <button class="btn" id="res" onclick="resultado()">=</button>
+        <section class="titulo">
+            <h1>Calculadora Virtual</h1>
+        </section>
+        <section class="container-calculadora">
+            <section class="container-calculo">
+                <input type="text" value="0" readonly id="input-calculo">
+                <section class="container-resultado">
+                    <h1 id="valor-final">0</h1>
                 </section>
             </section>
-        </div>
+            <section class="container-botoes">
+                <button class="btn" onclick="numero(this)">1</button>
+                <button class="btn" onclick="numero(this)">2</button>
+                <button class="btn" onclick="numero(this)">3</button>
+                <button class="btn" id="func-apagar" onclick="operacoes(this)">C</button>
+                <button class="btn" onclick="numero(this)">4</button>
+                <button class="btn" onclick="numero(this)">5</button>
+                <button class="btn" onclick="numero(this)">6</button>
+                <button class="btn" onclick="operacoes(this)">+</button>
+                <button class="btn" onclick="numero(this)">7</button>
+                <button class="btn" onclick="numero(this)">8</button>
+                <button class="btn" onclick="numero(this)">9</button>
+                <button class="btn" onclick="operacoes(this)">-</button>
+                <button class="btn" onclick="operacoes(this)">/</button>
+                <button class="btn" onclick="numero(this)">0</button>
+                <button class="btn" onclick="operacoes(this)">*</button>
+                <button class="btn" id="func-resultado" onclick="resultado(this)">=</button>
+            </section>
+        </section>
+        <section class="footer">
+            <h1>Criado por Marcelo Augusto</h1>
+        </section>
     </main>
-    <section class="creditos">
-        <h1>Calculadora Feito por Marcelo Augusto</h1>
-    </section>
     <script src="src/js/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 let botao = document.querySelectorAll('.btn');
-let input = document.querySelector('.input-conta');
-let del = document.querySelector('#delete');
-let res = document.querySelector('.res');
+let input = document.querySelector('#input-calculo');
+let del = document.querySelector('#func-apagar');
+let res = document.querySelector('#valor-final');
 
 del.addEventListener('click', function() {
     input.value = "0"
@@ -16,14 +16,22 @@ function numero(id){
     }
 }
 function operacoes(id){
-    if(input.value != "" && input.value != "0" && input.value[(input.value.length) - 1] != "-" && input.value[(input.value.length) - 1] != "+" &&input.value[(input.value.length) - 1] != "*" && input.value[(input.value.length) - 1] != "/"){
+    if(verificar()){
         input.value += id.textContent;
     }
 }
 
 function resultado(){
-    if(input.value != "" && input.value != "0" && input.value[(input.value.length) - 1] != "-" && input.value[(input.value.length) - 1] != "+" &&input.value[(input.value.length) - 1] != "*" && input.value[(input.value.length) - 1] != "/"){
+    if(verificar()){
         let resultado = eval(input.value)
-        res.innerHTML = resultado.toFixed(2)
+        res.innerHTML = resultado.toFixed(1)
+    }
+}
+
+function verificar(){
+    if(input.value != "" && input.value != "0" && input.value[(input.value.length) - 1] != "-" && input.value[(input.value.length) - 1] != "+" &&input.value[(input.value.length) - 1] != "*" && input.value[(input.value.length) - 1] != "/"){
+        return true
+    } else{
+        return false
     }
 }
