@@ -5,7 +5,7 @@ let res = document.querySelector('#valor-final');
 
 del.addEventListener('click', function() {
     input.value = "0"
-    res.innerHTML = "0"
+    res.innerHTML = "Resultado"
 })
 
 function numero(id){
