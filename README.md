@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="src/imagens/calculadora.png">
+    <img src="src/imagens/CAPA_CALCULADORA.png">
     <p>Calculadora Virtual🧮</p>
 </h1>
 

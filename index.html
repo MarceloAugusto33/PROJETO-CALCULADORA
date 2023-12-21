@@ -8,16 +8,22 @@
 </head>
 <body>
     <main>
+        <!-- TITULO -->
         <section class="titulo">
             <h1>Calculadora Virtual</h1>
         </section>
+
+        <!-- CONTAINER DA CALCULADORA -->
         <section class="container-calculadora">
+            <!-- CONTAINER DA JANELA DE EXIBIÇÃO -->
             <section class="container-calculo">
                 <input type="text" value="0" readonly id="input-calculo">
                 <section class="container-resultado">
                     <h1 id="valor-final">Resultado</h1>
                 </section>
             </section>
+
+            <!-- CONTAINER DOS BOTOES -->
             <section class="container-botoes">
                 <button class="btn" onclick="numero(this)">1</button>
                 <button class="btn" onclick="numero(this)">2</button>
@@ -37,8 +43,10 @@
                 <button class="btn" id="func-resultado" onclick="resultado(this)">=</button>
             </section>
         </section>
+        
+        <!-- CONTAINER FOOTER -->
         <section class="footer">
-            <h1>Criado por Marcelo Augusto</h1>
+            <h1>Criado por <a href="https://github.com/MarceloAugusto33">Marcelo Augusto</a></h1>
         </section>
     </main>
     <script src="src/js/script.js"></script>
