@@ -111,9 +111,18 @@ main{
     align-items: center;
     justify-content: center;
 }
-.footer > h1{
+.footer a{
+    text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.6rem;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+span{
+    color: #6C63FF;
 }
 @media screen and (min-width:1000px){
     .container-calculadora{

@@ -1,37 +1,30 @@
-let botao = document.querySelectorAll('.btn');
-let input = document.querySelector('#input-calculo');
-let del = document.querySelector('#func-apagar');
-let res = document.querySelector('#valor-final');
+const displayInput = document.querySelector('#input-calculo');
+const displayResult = document.querySelector('#valor-final');
 
-del.addEventListener('click', function() {
-    input.value = "0"
-    res.innerHTML = "Resultado"
+document.addEventListener('click', (e) => {
+
+    if (e.target.textContent === '=') {
+        try {
+            let result = eval(displayInput.value)
+            displayResult.textContent = result;
+
+            if(result == 'NAN'){
+                displayResult.textContent = 'Conta Invalida!'
+            }
+
+        } catch (err) {
+            displayResult.textContent = 'Conta Invalida!'
+        }
+        return
+    }
+
+    if (e.target.classList.contains('btn')) {
+        displayInput.value += e.target.textContent
+    }
+
+    if (e.target.textContent === 'C') {
+        displayInput.value = ''
+        displayResult.textContent = 'Resultado'
+    }
+
 })
-
-function numero(id){
-    if(input.value == "0"){
-        input.value = id.textContent;
-    } else{
-        input.value += id.textContent;
-    }
-}
-function operacoes(id){
-    if(verificar()){
-        input.value += id.textContent;
-    }
-}
-
-function resultado(){
-    if(verificar()){
-        let resultado = eval(input.value)
-        res.innerHTML = resultado.toFixed(1)
-    }
-}
-
-function verificar(){
-    if(input.value != "" && input.value != "0" && input.value[(input.value.length) - 1] != "-" && input.value[(input.value.length) - 1] != "+" &&input.value[(input.value.length) - 1] != "*" && input.value[(input.value.length) - 1] != "/"){
-        return true
-    } else{
-        return false
-    }
-}
