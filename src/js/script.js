@@ -8,13 +8,12 @@ document.addEventListener('click', (e) => {
             let result = eval(displayInput.value)
             displayResult.textContent = result;
 
-            if(result == 'NAN'){
-                displayResult.textContent = 'Conta Invalida!'
-            }
+            if(result == 'NAN') displayResult.textContent = 'Conta Invalida!'
 
         } catch (err) {
             displayResult.textContent = 'Conta Invalida!'
         }
+        
         return
     }
 
